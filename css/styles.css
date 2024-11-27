@@ -1,0 +1,948 @@
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #020202;
+    color: #ffffff;
+}
+
+/* Web-Header starts */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+    height: 80px;
+}
+
+.logo-container,
+.nav-links,
+.social-media {
+    flex: 1;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-right: 18px;
+}
+
+.nav-links li {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff0000;
+}
+
+
+.arrow {
+    display: none;
+}
+
+.home-link {
+    display: none;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 95px;
+}
+
+
+.social-media li {
+    display: flex;
+    list-style: none;
+}
+
+.social-media a {
+    display: inline-block;
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    border-radius: 50%; /* Make the element circular */
+    border: 0.9px solid #ffffff6d; /* Add a border to create the ring effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.1s ease, border-color 0.1s ease, color 0.1s ease; 
+    padding: 7px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.social-media a {
+    color: #ffffff6d;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+.social-media li {
+    margin: 0 0.1em;
+}
+
+.social-media li a img {
+    width: 14px;
+    height: 14px; 
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/media/CyberwayRiders.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.logo1 {
+    font-family: 'MyCustomFont', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.logo {
+    font-family: 'MyCustomFont', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: end;
+    margin-right: 80px;
+    margin-bottom: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.word0 {
+    font-size: 75px;
+    color: red;
+    position: relative;
+    top: 12px;
+}
+
+.word1 {
+    margin-right: 2px;
+    /* Adjust the spacing as needed */
+}
+
+.word2 {
+    margin-right: 0.5px;
+    /* Adjust the spacing as needed */
+}
+
+.word4 {
+    margin-left: 8px;
+}
+
+.reg-symbol {
+    font-size: 6px;
+    /* Adjust the size as needed */
+    font-family: Arial, sans-serif;
+    /* Set to a normal font family */
+    vertical-align: super;
+    /* Align the symbol properly */
+    margin-left: 10px;
+    color: rgb(222, 221, 221);
+}
+
+.toggle-button {
+    display: none;
+    /* Hide by default */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: -10px;
+}
+
+
+/* Mobile navigation-header-sublist */
+.sub-list {
+    display: none;
+    /* Hide submenu initially */
+    flex-direction: column;
+
+    /* Background color for submenu */
+    list-style-type: none;
+    /* No bullets */
+    margin: 0;
+    /* Remove margin */
+    padding: 0;
+    /* Remove padding */
+}
+
+.sub-list li {
+    display: none;
+}
+
+.sub-list li a {
+    padding: 10px;
+    /* Padding for submenu items */
+    color: white;
+    /* Text color */
+    text-decoration: none;
+    /* No underline */
+    display: block;
+    /* Full width */
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li:hover .sub-list1 {
+    display: block;
+}
+
+/*experiment*/
+/* Submenu hidden by default */
+.sub-list1 {
+    display: none;
+    /* Hide submenu initially */
+    position: absolute;
+    flex-direction: column;
+    background-color: #e11616;
+    /* Background color for submenu */
+    list-style-type: none;
+    /* No bullets */
+    left: 0;
+    /* Remove margin */
+    margin: 0;
+    /* Remove padding */
+    padding: 0;
+    width: 210px;
+    height: 130px;
+    z-index: 1;
+}
+
+.sub-list1 li {
+    display: block;
+    flex-direction: column;
+    padding: 3px;
+}
+
+.sub-list1 li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: medium;
+    text-align: left;
+    width: 100%;
+}
+
+.sub-list1 li a:hover {
+    color: #f3a5a5;
+}
+
+.sub-list1.active {
+    display: block;
+}
+
+/* Styling for the main menu label */
+.menu-label {
+    cursor: pointer;
+    /* Pointer cursor for clickable label */
+    color: white;
+    display: block;
+    align-items: center;
+}
+
+/*experiment*/
+/*header class almost ends here*/
+
+/*font-size */
+h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 35px;
+    /* Increase the font size for h1 */
+}
+
+h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 22px;
+    /* Increase the font size for h3 */
+}
+
+p {
+    font-size: 20px;
+    /* Increase the font size for paragraphs */
+}
+
+#home p {
+    font-size: 25px;
+    /* Increase the font size for paragraphs */
+}
+
+#games h3 {
+    font-size: 45px;
+}
+
+#games p {
+    font-size: 25px;
+    /* Increase the font size for paragraphs in the #games section */
+    font-weight: bold;
+}
+
+
+/*hero-section */
+.logo1 {
+    display: inline-block;
+    /* Make the logo an inline-block element */
+    margin-right: 0;
+    /* Remove the existing margin-right */
+}
+
+@media (max-width: 768px) {
+    .logo1 {
+        display: inline-block;
+        margin-right: 0;
+
+    }
+}
+
+.hero {
+    background-image: url('/media/ff.jpg');
+    background-size: cover;
+    background-position: bottom;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 7em 0;
+}
+
+.hero-container {
+    display: flex;
+}
+
+header {
+    order: 1;
+    /* Ensure the mobile header is first */
+}
+
+.hero-container {
+    order: 2;
+    /* Move the hero-container section below the header */
+    flex-direction: column;
+    /* Move the hero-container section below the header */
+}
+
+#hero-cta {
+    font-weight: bold;  
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.cta-button {
+    background-color: #ff0000;
+    color: white;
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 22px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    animation: moveUpDown 3s infinite; /* Apply the animation */
+    box-shadow: 0 4px 0 #b30000, 0 4px 10px rgba(0, 0, 0, 0.2); /* 3D button effect */
+    position: relative;
+    overflow: hidden;  
+}
+
+@keyframes glow-cyan {
+    0%, 100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ff, 0 0 20px #0ff, 0 0 25px #0ff, 0 0 30px #0ff, 0 0 35px #0ff;
+    }
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff, 0 0 70px #0ff;
+    }
+}
+
+@keyframes glow-skyblue {
+    0%, 100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #87ceeb, 0 0 20px #87ceeb, 0 0 25px #87ceeb, 0 0 30px #87ceeb, 0 0 35px #87ceeb;
+    }
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #87ceeb, 0 0 40px #87ceeb, 0 0 50px #87ceeb, 0 0 60px #87ceeb, 0 0 70px #87ceeb;
+    }
+}
+
+@keyframes glow-red {
+    0%, 100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000, 0 0 30px #ff0000, 0 0 35px #ff0000;
+    }
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
+    }
+}
+
+#hero-cta {
+    font-weight: bold;
+    font-size: 2em; /* Adjust the size as needed */
+    color: white; /* Ensure the text color is white */
+    font-style: italic;
+    animation: glow-cyan 3s infinite; /* Apply the glowing animation */
+}
+
+#hero-cta2 {  
+    color: white;
+    font-style: italic;
+    animation: glow-red 3s infinite; /* Apply the glowing animation */
+}
+
+/*cta*/
+
+.highlight {
+    color: red;
+    /* Change the color to red */
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+h2 {
+    padding-top: 20px;
+}
+
+section {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.game-item {
+    background-color: #000000;
+    padding: 2em;
+    border: 1px solid #020202;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    margin-top: 0;
+}
+
+.game-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1em;
+}
+
+.game-item h3 {
+    font-size: 100px;
+    margin-bottom: 0.5em;
+}
+
+.game-item p {
+    font-size: 1em;
+    color: #ccc;
+}
+
+.about h2 {
+    color: red;
+}
+
+.support {
+    text-decoration: none;
+}
+
+/*jobs-button*/
+.open-positions-button {
+    position: fixed;
+    right: 0;
+    top: 54.3%;
+    transform: translateY(-50%);
+    background-color: #ff0000;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 50px 0 0 50px;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: width 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+    width: 40px;
+    /* Initial width to show only the image */
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.open-positions-button:hover {
+    background-color: #ff0000;
+    width: 140px;
+    /* Expand width to show full text */
+}
+
+.open-positions-button .button-icon {
+    width: 40px;
+    /* Adjust the size as needed */
+    height: 48px;
+    /* Adjust the size as needed */
+    flex-shrink: 0;
+    margin-left: 4.5px;
+}
+
+.open-positions-button .button-text {
+    margin-left: 8px;
+}
+
+.check-text {
+    display: block;
+    /* Ensure it is a block element */
+    font-size: 15px;
+    /* Adjust the size as needed */
+}
+
+.open-positions-text {
+    display: block;
+    /* Ensure it is a block element */
+    font-size: 15px;
+    /* Adjust the size as needed */
+}
+
+
+/*gototoptbtn*/
+#goToTopBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #e11515;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: 38px; /* Set a fixed width */
+    height: 38px; /* Set a fixed height */
+    border-radius: 50%; /* Make the button circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    font-size: 18px; /* Base font size */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding-top: 6px;
+}
+
+#goToTopBtn i {
+    font-size: 20px; /* Adjust the size of the icon */
+    transform: scale(1.2, 1.6); 
+}
+
+/*footer */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 1em;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/*footer social-media */
+
+.footer-social-media {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0; 
+}
+
+.footer-social-media li {  
+    margin: 0 0.2em; /* Ensure margin is applied to list items */
+}
+
+.footer-social-media a {
+    display: inline-block;
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    border-radius: 50%; /* Make the element circular */
+    border: 0.9px solid #ffffff6d; /* Add a border to create the ring effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.1s ease, border-color 0.1s ease, color 0.1s ease; /* Combine transitions */
+    color: #ffffff6d; /* Ensure the icon color is semi-transparent */
+    font-size: 18px; /* Adjust the icon size as needed */
+    text-decoration: none;
+    padding: 7px;/* Add padding to create space inside the circle */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better clarity */
+    backface-visibility: hidden; /* Improve rendering quality */
+    transform: translateZ(0); /* Improve rendering quality */
+}
+
+.footer-social-media a {
+    color: #ffffff6d;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.1s ease;
+}
+
+
+
+.footer-social-media a:hover {
+    color: red;
+    border-color: #ff0000; /* Change border color on hover */    
+}
+
+.footer-social-media i:hover {
+    scale: 1.3;
+}
+
+.footer-social-media li a img {
+    width: 14px;
+    height: 14px;  
+}
+
+#footer-copy {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.822);
+}
+
+.social-media {
+    justify-content: center;
+}
+
+
+/* Mobile view adjustments starts here*/
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: flex-start;
+        /* Align items to the start (left) */
+        padding: 10px;
+        /* Optional padding adjustment for mobile */
+        height: 134px;
+        order: 1;
+        position: relative;
+    }
+
+    /* Social media icons displayed in a row at the top left */
+    .social-media {
+        flex-direction: row;
+        display: flex;
+        /* Use flexbox to align icons horizontally */
+        justify-content: flex-start;
+        /* Align items to the start (left) */
+        width: 100%;
+        /* Optional: take full width */
+        order: 1;
+        /* Position social media above the logo */
+    }
+
+    .social-media a {
+        color: #ffffff6d;
+        font-size: 13px;
+        text-decoration: none;
+        transition: color 0.1s ease;
+        width: 18px; /* Adjust the size as needed */
+        height: 18px;
+    }
+
+    .social-media a:hover {
+        color: #ff0000;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        /* Align items in a row */
+        order: 2;
+        justify-content: space-between;
+        /* Space between logo and toggle button */
+        align-items: center;
+        /* Align items in a straight line */
+        width: 100%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: flex-start;
+        /* Center the logo */
+        width: 100%;
+        order: 1;
+        /* Position logo before toggle button */
+        font-size: 12px;
+    }
+
+    .word0 {
+        font-size: 50px;
+        margin-bottom: 14px;
+    }
+
+    .word1,
+    .word2,
+    .word3,
+    .word4 {
+        margin-top: 35px;
+    }
+
+    .reg-symbol {
+        font-size: 4px;
+        /* Adjust the size as needed */
+        font-family: Arial, sans-serif;
+        /* Set to a normal font family */
+        vertical-align: text-top;
+        margin-left: 8px;
+        color: rgb(222, 221, 221);
+    }
+
+    .toggle-button {
+        color: #ffffff7e;
+        display: block;
+        order: 2;
+        /* Position toggle button after logo */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #e11515;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        padding-top: 10px;
+        max-height: 0;
+        /* Initially collapsed */
+        overflow: hidden;
+        /* Hide overflowing content */
+        transition: max-height 0.5s ease;
+        /* Transition effect */
+    }
+
+    .nav-links li {
+        width: 100%;
+        color: white;
+        /* Text color */
+        text-decoration: none;
+        /* Remove link underline */
+        display: block;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px;
+        /* Add padding for better clickability */
+        text-align: left;
+        color: white;
+        /* Text color */
+        text-decoration: none;
+        /* Remove link underline */
+        display: block;
+        /* Make link take full width */
+        box-sizing: border-box;
+        width: calc(100% - 30px);
+        font-size: large;
+        padding-left: 7px;
+        margin-left: 0;
+    }
+
+    .nav-links a:hover {
+        color: #ffffff;
+    }
+
+    .nav-links.active {
+        display: flex;
+        height: auto;
+        /* Allow it to expand to fit all items */
+        padding-bottom: 10px;
+        max-height: 350px;
+    }
+
+    .arrow {
+        display: inline;
+    }
+
+    .home-link {
+        display: inline;
+    }
+
+    .nav-links li:hover .sub-list {
+        display: none;
+    }
+
+    /* Submenu hidden by default */
+    .sub-list {
+        display: none;
+        /* Hide submenu initially */
+        flex-direction: column;
+        background-color: #e11515;
+        /* Background color for submenu */
+        list-style-type: none;
+        /* No bullets */
+        margin: 0;
+        /* Remove margin */
+        padding: 0;
+        /* Remove padding */
+    }
+
+    .sub-list li a {
+        padding: 10px;
+        /* Padding for submenu items */
+        color: white;
+        /* Text color */
+        text-decoration: none;
+        /* No underline */
+        display: block;
+        /* Full width */
+        font-size: medium;
+        padding-left: 25px;       
+    }
+
+    .sub-list li a:hover {
+        background-color: #ffffff;
+        color: #000000;
+        width: calc(100% - 20px);     
+    }
+
+    .sub-list.active {
+        display: flex;
+        /* Show submenu when active */
+    }
+
+    /* Styling for the main menu label */
+    .menu-label {
+        cursor: pointer;
+        /* Pointer cursor for clickable label */
+        color: white;
+        /* Text color */
+        padding: 15px;
+        /* Padding for label */
+        display: flex;
+        /* Flex display for icon */
+        align-items: center;
+        /* Center icon vertically */
+    }
+
+    /*header ends here*/
+
+    /*experiment*/
+    /* Mobile navigation-header-sublist */
+    .sub-list1 {
+        display: none;
+        /* Hide submenu initially */
+    }
+
+    .sub-list1 li {
+        display: none;
+    }
+
+    .sub-list1 li a {
+        display: none;
+    }
+
+    /*experiment*/
+    section {
+        padding:  0;}
+
+    /*hero-section starts here */
+    .hero {
+        background-image: url('/media/ffs.jpg');
+        background-size: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        color: white;
+        text-align: center;
+        padding: 7em 0;
+      padding-bottom: 0;
+    }
+
+    .game-item {
+        background-color: #000000;
+        padding: 2em;
+        border: 1px solid #020202;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    #games h3 {
+        font-size: 38px;
+    }
+
+    #footer-copy {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .footer-social-media li { 
+        margin: 0 0.150em; /* Ensure margin is applied to list items */
+    }
+   
+    .footer-social-media a {
+        color: #ffffff6d;
+        font-size: 13px;
+        text-decoration: none;
+        transition: color 0.1s ease;
+        width: 18px; /* Adjust the size as needed */
+        height: 18px;
+    }
+
+}
